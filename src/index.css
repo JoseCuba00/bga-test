@@ -1,13 +1,139 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.container {
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+/* Título principal */
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/* Botón de variante */
+.variant-button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  background: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.variant-button:hover {
+  background: #f3f3f3;
+}
+
+/* Botón de reinicio */
+.reset-button {
+  margin: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  border: none;
+  background: transparent;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Pregunta */
+.question {
+  margin: 1rem 0;
+}
+.question h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* Lista de opciones */
+.option-list {
+  list-style: none;
+  padding: 0;
+}
+.option-item {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.option-item.correct {
+  background-color: #89df74 !important;
+  opacity: 0.65 !important;
+  border: 1px solid #70a366 !important;
+}
+
+.option-item.wrong.wrong {
+  background-color: #ff9d72 !important;
+  opacity: 0.65 !important;
+  border: 1px solid #e66e39 !important;
+}
+.option-item {
+  position: relative;
+  border: 1px solid rgb(229, 229, 229);
+
+  padding: 10px;
+  border-radius: 12px;
+  max-width: 500px;
+  display: flex;
+  justify-content: flex-start;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.06),
+    0px 1px 3px 0px rgba(16, 24, 40, 0.1);
+}
+
+input[type="radio"].option-item {
+  flex-shrink: 0; /* Evita que el input radio cambie de tamaño */
+}
+
+.checkbox-quiz {
+  width: 20px; /* Ajusta el tamaño según tus necesidades */
+  height: 20px; /* Ajusta el tamaño según tus necesidades */
+}
+
+/* Cambiar el color del radio button cuando está seleccionado */
+input[type="radio"].option-item {
+  appearance: none;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  border: 1px solid rgb(93, 93, 96);
+  margin-right: 10px;
+  position: relative;
+  background-color: transparent;
+}
+
+.selected input[type="radio"].option-item {
+  appearance: none;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin-right: 10px;
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+input[type="radio"].option-item:checked::before {
+  content: "";
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
 }

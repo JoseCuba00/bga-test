@@ -1,0 +1,65 @@
+.container {
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+/* Título principal */
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/* Botón de variante */
+.variant-button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  background: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.variant-button:hover {
+  background: #f3f3f3;
+}
+
+/* Botón de reinicio */
+.reset-button {
+  margin: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  border: none;
+  background: transparent;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Pregunta */
+.question {
+  margin: 1rem 0;
+}
+.question h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* Lista de opciones */
+.option-list {
+  list-style: none;
+  padding: 0;
+}
+.option-item {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+.option-item.correct {
+  background-color: #d1fae5;
+}
+.option-item.wrong {
+  background-color: #fee2e2;
+}
